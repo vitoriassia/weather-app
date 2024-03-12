@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex_app/app/core/design/images/app_images.dart';
-import 'package:pokedex_app/app/core/design/res/dimen.dart';
-import 'package:pokedex_app/app/core/design/styles/text_style.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/custom_pokemon_image.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_entity.dart';
-import 'package:pokedex_app/app/features/home/presentation/widgets/pokemon_card/pokemon_image.dart';
-import 'package:pokedex_app/app/features/home/presentation/widgets/pokemon_card/pokemon_type.dart';
+import 'package:weather_app/app/core/design/images/app_images.dart';
+import 'package:weather_app/app/core/design/res/dimen.dart';
+import 'package:weather_app/app/core/design/styles/text_style.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/custom_pokemon_image.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_entity.dart';
+import 'package:weather_app/app/features/home/presentation/widgets/pokemon_card/pokemon_image.dart';
+import 'package:weather_app/app/features/home/presentation/widgets/pokemon_card/pokemon_type.dart';
 
 class PokemonCard extends StatelessWidget {
   static const double _pokeballFraction = 0.75;

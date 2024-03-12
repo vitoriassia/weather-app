@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pokedex_app/app/core/design/decorations/input_decorations.dart';
-import 'package:pokedex_app/app/core/design/res/app_colors.dart';
-import 'package:pokedex_app/app/core/design/res/dimen.dart';
+import 'package:weather_app/app/core/design/decorations/input_decorations.dart';
+import 'package:weather_app/app/core/design/res/app_colors.dart';
+import 'package:weather_app/app/core/design/res/dimen.dart';
 
 class TextFormFieldWithLabel extends StatelessWidget {
   final String label;

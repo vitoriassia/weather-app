@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/app/core/design/res/app_colors.dart';
-import 'package:pokedex_app/app/core/design/styles/text_style.dart';
+import 'package:weather_app/app/core/design/res/app_colors.dart';
+import 'package:weather_app/app/core/design/styles/text_style.dart';
 
 class CardButton extends StatelessWidget {
   final IconData icon;

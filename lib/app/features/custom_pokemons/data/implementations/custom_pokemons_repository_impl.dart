@@ -1,9 +1,9 @@
-import 'package:pokedex_app/app/core/services/api/errors/exception_handler_scope.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/datasources/custom_pokemons_local_data_source.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/entities/custom_pokemon_entity.dart';
-import 'package:pokedex_app/app/core/services/api/errors/failures.dart';
+import 'package:weather_app/app/core/services/api/errors/exception_handler_scope.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/datasources/custom_pokemons_local_data_source.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/entities/custom_pokemon_entity.dart';
+import 'package:weather_app/app/core/services/api/errors/failures.dart';
 import 'package:dartz/dartz.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/repositories/custom_pokemons_repository.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/repositories/custom_pokemons_repository.dart';
 
 class CustomPokemonsRepositoryImpl extends CustomPokemonsRepository {
   final CustomPokemonsLocalDataSource _localDataSource;

@@ -1,6 +1,6 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:pokedex_app/app/core/storage/config/storage_binds.dart';
-import 'package:pokedex_app/app/core/storage/custom_pokemon/adapters/pokemon_type/pokemon_type_box.dart';
+import 'package:weather_app/app/core/storage/config/storage_binds.dart';
+import 'package:weather_app/app/core/storage/custom_pokemon/adapters/pokemon_type/pokemon_type_box.dart';
 part 'custom_pokemon_box.g.dart';
 
 @HiveType(typeId: StorageBinds.customPokemonId)

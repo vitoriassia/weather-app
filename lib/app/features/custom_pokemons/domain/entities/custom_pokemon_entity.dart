@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/app/core/storage/custom_pokemon/adapters/custom_pokemon/custom_pokemon_box.dart';
-import 'package:pokedex_app/app/core/storage/custom_pokemon/adapters/pokemon_type/pokemon_type_box.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_entity.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_type_entity.dart';
+import 'package:weather_app/app/core/storage/custom_pokemon/adapters/custom_pokemon/custom_pokemon_box.dart';
+import 'package:weather_app/app/core/storage/custom_pokemon/adapters/pokemon_type/pokemon_type_box.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_entity.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_type_entity.dart';
 
 class CustomPokemonEntity extends PokemonEntity {
   final String? imagePath;

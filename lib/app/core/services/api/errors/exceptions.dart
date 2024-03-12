@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:pokedex_app/app/core/services/api/response/error_response.dart';
+import 'package:weather_app/app/core/services/api/response/error_response.dart';
 
 class ServerException extends Equatable implements Exception {
   final int? statusCode;

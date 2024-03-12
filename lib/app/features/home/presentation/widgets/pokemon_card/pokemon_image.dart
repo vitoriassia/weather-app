@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/app/core/design/images/app_images.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_entity.dart';
+import 'package:weather_app/app/core/design/images/app_images.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_entity.dart';
 
 class PokemonImage extends StatelessWidget {
   static const Size _cacheMaxSize = Size(700, 700);

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pokedex_app/app/core/binds/binds_helper.dart';
-import 'package:pokedex_app/app/core/design/res/app_colors.dart';
-import 'package:pokedex_app/app/core/design/res/dimen.dart';
-import 'package:pokedex_app/app/core/shared/presentation/ui_state.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/entities/custom_pokemon_entity.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/controllers/custom_pokemons_controller.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/add_custom_pokemon_widget.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/preview_custom_pokemon.dart';
-import 'package:pokedex_app/app/shared/presentation/app_dialog.dart';
-import 'package:pokedex_app/app/shared/presentation/stadium_button.dart';
+import 'package:weather_app/app/core/binds/binds_helper.dart';
+import 'package:weather_app/app/core/design/res/app_colors.dart';
+import 'package:weather_app/app/core/design/res/dimen.dart';
+import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/entities/custom_pokemon_entity.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/controllers/custom_pokemons_controller.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/add_custom_pokemon_widget.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/preview_custom_pokemon.dart';
+import 'package:weather_app/app/shared/presentation/app_dialog.dart';
+import 'package:weather_app/app/shared/presentation/stadium_button.dart';
 
 class CustomPokemonDetail extends StatefulWidget {
   final CustomPokemonEntity pokemonEntity;

@@ -1,7 +1,7 @@
 import 'package:hive/hive.dart';
-import 'package:pokedex_app/app/core/storage/config/hive_box_writer.dart';
-import 'package:pokedex_app/app/core/storage/config/storage_binds.dart';
-import 'package:pokedex_app/app/core/storage/custom_pokemon/adapters/custom_pokemon/custom_pokemon_box.dart';
+import 'package:weather_app/app/core/storage/config/hive_box_writer.dart';
+import 'package:weather_app/app/core/storage/config/storage_binds.dart';
+import 'package:weather_app/app/core/storage/custom_pokemon/adapters/custom_pokemon/custom_pokemon_box.dart';
 import 'dart:developer' as developer;
 
 class CustomPokemonWriter extends HiveBoxWriter<CustomPokemonBox> {

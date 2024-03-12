@@ -1,5 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:pokedex_app/app/core/storage/config/storage_binds.dart';
+import 'package:weather_app/app/core/storage/config/storage_binds.dart';
 
 part 'pokemon_type_box.g.dart';
 

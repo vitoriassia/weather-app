@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/app/core/design/res/dimen.dart';
-import 'package:pokedex_app/app/core/design/styles/text_style.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_entity.dart';
-import 'package:pokedex_app/app/features/home/presentation/widgets/pokemon_card/pokemon_image.dart';
-import 'package:pokedex_app/app/features/home/presentation/widgets/pokemon_card/pokemon_type.dart';
-import 'package:pokedex_app/app/shared/presentation/app_dialog.dart';
-import 'package:pokedex_app/app/shared/presentation/app_dialog/semi_background.dart';
+import 'package:weather_app/app/core/design/res/dimen.dart';
+import 'package:weather_app/app/core/design/styles/text_style.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_entity.dart';
+import 'package:weather_app/app/features/home/presentation/widgets/pokemon_card/pokemon_image.dart';
+import 'package:weather_app/app/features/home/presentation/widgets/pokemon_card/pokemon_type.dart';
+import 'package:weather_app/app/shared/presentation/app_dialog.dart';
+import 'package:weather_app/app/shared/presentation/app_dialog/semi_background.dart';
 
 class PokemonDetailCard extends StatelessWidget {
   final PokemonEntity pokemonEntity;

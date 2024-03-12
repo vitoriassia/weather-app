@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/app/app_widget.dart';
+import 'package:weather_app/app/app_widget.dart';
 import 'package:intl/intl.dart';
 
 abstract class RunApp {

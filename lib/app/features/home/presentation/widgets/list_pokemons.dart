@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pokedex_app/app/core/shared/presentation/ui_state.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_entity.dart';
-import 'package:pokedex_app/app/features/home/presentation/controllers/home_controller.dart';
-import 'package:pokedex_app/app/features/home/presentation/widgets/pokemon_card/pokemon_card.dart';
-import 'package:pokedex_app/app/features/paginated_list_view/data/pagination.dart';
-import 'package:pokedex_app/app/features/paginated_list_view/presentation/paginated_list_view_widget.dart';
-import 'package:pokedex_app/app/features/pokemon_detail/pokemon_detail_card.dart';
-import 'package:pokedex_app/app/shared/presentation/show_dialog_with_scale_animation.dart';
+import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_entity.dart';
+import 'package:weather_app/app/features/home/presentation/controllers/home_controller.dart';
+import 'package:weather_app/app/features/home/presentation/widgets/pokemon_card/pokemon_card.dart';
+import 'package:weather_app/app/features/paginated_list_view/data/pagination.dart';
+import 'package:weather_app/app/features/paginated_list_view/presentation/paginated_list_view_widget.dart';
+import 'package:weather_app/app/features/pokemon_detail/pokemon_detail_card.dart';
+import 'package:weather_app/app/shared/presentation/show_dialog_with_scale_animation.dart';
 
 class ListPokemons extends StatelessWidget {
   final HomeController homeController;

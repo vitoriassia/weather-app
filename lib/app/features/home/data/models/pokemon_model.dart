@@ -1,8 +1,8 @@
-import 'package:pokedex_app/app/features/home/data/models/pokemon_ability_model.dart';
-import 'package:pokedex_app/app/features/home/data/models/pokemon_type_model.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_ability_entity.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_entity.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_type_entity.dart';
+import 'package:weather_app/app/features/home/data/models/pokemon_ability_model.dart';
+import 'package:weather_app/app/features/home/data/models/pokemon_type_model.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_ability_entity.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_entity.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_type_entity.dart';
 
 class PokemonModel extends PokemonEntity {
   const PokemonModel(

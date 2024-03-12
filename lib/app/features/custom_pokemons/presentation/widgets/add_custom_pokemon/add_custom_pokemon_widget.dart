@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:pokedex_app/app/core/binds/binds_helper.dart';
-import 'package:pokedex_app/app/core/design/res/app_colors.dart';
-import 'package:pokedex_app/app/core/design/res/dimen.dart';
-import 'package:pokedex_app/app/core/design/styles/text_style.dart';
-import 'package:pokedex_app/app/core/shared/presentation/ui_state.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/entities/custom_pokemon_entity.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/controllers/custom_pokemons_controller.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/card_button.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/preview_custom_pokemon.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/select_types_pokemon.dart';
-import 'package:pokedex_app/app/shared/presentation/show_dialog_with_scale_animation.dart';
-import 'package:pokedex_app/app/shared/presentation/stadium_button.dart';
-import 'package:pokedex_app/app/shared/presentation/text_form_field_with_label.dart';
+import 'package:weather_app/app/core/binds/binds_helper.dart';
+import 'package:weather_app/app/core/design/res/app_colors.dart';
+import 'package:weather_app/app/core/design/res/dimen.dart';
+import 'package:weather_app/app/core/design/styles/text_style.dart';
+import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/entities/custom_pokemon_entity.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/controllers/custom_pokemons_controller.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/card_button.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/preview_custom_pokemon.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/widgets/select_types_pokemon.dart';
+import 'package:weather_app/app/shared/presentation/show_dialog_with_scale_animation.dart';
+import 'package:weather_app/app/shared/presentation/stadium_button.dart';
+import 'package:weather_app/app/shared/presentation/text_form_field_with_label.dart';
 
 class AddCustomPokemonWidget extends StatefulWidget {
   final CustomPokemonEntity? editCustomPokemon;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_type_entity.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_type_entity.dart';
 
 class PokemonTypeWidget extends StatelessWidget {
   final double width;

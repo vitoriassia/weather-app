@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:pokedex_app/app/core/services/api/api_config.dart';
-import 'package:pokedex_app/app/core/services/api/errors/exception_handler_scope.dart';
-import 'package:pokedex_app/app/core/services/api/response/http_response.dart';
-import 'package:pokedex_app/app/core/services/api_service.dart';
+import 'package:weather_app/app/core/services/api/api_config.dart';
+import 'package:weather_app/app/core/services/api/errors/exception_handler_scope.dart';
+import 'package:weather_app/app/core/services/api/response/http_response.dart';
+import 'package:weather_app/app/core/services/api_service.dart';
 
 class ApiServiceImpl extends ApiService {
   final ApiConfig apiConfig;

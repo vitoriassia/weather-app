@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/app/core/design/images/app_images.dart';
+import 'package:weather_app/app/core/design/images/app_images.dart';
 
 class CustomPokemonImage extends StatelessWidget {
   final EdgeInsets padding;

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/app/core/design/res/app_colors.dart';
-import 'package:pokedex_app/app/core/storage/custom_pokemon/adapters/pokemon_type/pokemon_type_box.dart';
+import 'package:weather_app/app/core/design/res/app_colors.dart';
+import 'package:weather_app/app/core/storage/custom_pokemon/adapters/pokemon_type/pokemon_type_box.dart';
 
 class PokemonTypeEntity extends Equatable {
   final String name;

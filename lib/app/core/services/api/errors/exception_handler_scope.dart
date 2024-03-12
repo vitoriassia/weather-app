@@ -2,9 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:developer' as developer;
-import 'package:pokedex_app/app/core/services/api/errors/exceptions.dart';
-import 'package:pokedex_app/app/core/services/api/errors/failures.dart';
-import 'package:pokedex_app/app/core/services/api/response/error_response.dart';
+import 'package:weather_app/app/core/services/api/errors/exceptions.dart';
+import 'package:weather_app/app/core/services/api/errors/failures.dart';
+import 'package:weather_app/app/core/services/api/response/error_response.dart';
 
 Future<Either<Failure, T>> repositoryExceptionHandlerScope<T>(
     Function function) async {

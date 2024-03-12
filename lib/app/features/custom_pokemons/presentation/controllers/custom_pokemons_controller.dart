@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
-import 'package:pokedex_app/app/core/shared/presentation/message_to_failure_converter/failure_to_message_converter_factory.dart';
-import 'package:pokedex_app/app/core/shared/presentation/ui_state.dart';
-import 'package:pokedex_app/app/core/utils/file_creator.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/entities/custom_pokemon_entity.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/useCases/delete_custom_pokemon_use_case.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/useCases/get_list_custom_pokemons_use_case.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/useCases/register_custom_pokemon_use_case.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_type_entity.dart';
+import 'package:weather_app/app/core/shared/presentation/message_to_failure_converter/failure_to_message_converter_factory.dart';
+import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
+import 'package:weather_app/app/core/utils/file_creator.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/entities/custom_pokemon_entity.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/useCases/delete_custom_pokemon_use_case.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/useCases/get_list_custom_pokemons_use_case.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/useCases/register_custom_pokemon_use_case.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_type_entity.dart';
 
 class CustomPokemonsController extends GetxController {
   // --- USECASES --- //

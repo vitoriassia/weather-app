@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex_app/app/core/design/res/dimen.dart';
+import 'package:weather_app/app/core/design/res/dimen.dart';
 
 class ProgressIndicatorPokedex extends StatelessWidget {
   const ProgressIndicatorPokedex({super.key});

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pokedex_app/app/core/design/res/app_colors.dart';
-import 'package:pokedex_app/app/core/design/res/dimen.dart';
-import 'package:pokedex_app/app/core/design/styles/text_style.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_type_entity.dart';
-import 'package:pokedex_app/app/features/home/presentation/widgets/pokemon_card/pokemon_type.dart';
-import 'package:pokedex_app/app/shared/presentation/app_dialog.dart';
-import 'package:pokedex_app/app/shared/presentation/stadium_button.dart';
+import 'package:weather_app/app/core/design/res/app_colors.dart';
+import 'package:weather_app/app/core/design/res/dimen.dart';
+import 'package:weather_app/app/core/design/styles/text_style.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_type_entity.dart';
+import 'package:weather_app/app/features/home/presentation/widgets/pokemon_card/pokemon_type.dart';
+import 'package:weather_app/app/shared/presentation/app_dialog.dart';
+import 'package:weather_app/app/shared/presentation/stadium_button.dart';
 
 class SelectTypesPokemon extends StatefulWidget {
   final Function(List<PokemonTypeEntity> list) onSave;

@@ -1,4 +1,4 @@
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_ability_entity.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_ability_entity.dart';
 
 class PokemonAbilityModel extends PokemonAbilityEntity {
   const PokemonAbilityModel({

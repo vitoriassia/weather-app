@@ -2,10 +2,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
-import 'package:pokedex_app/app/core/services/api/errors/failures.dart';
-import 'package:pokedex_app/app/core/shared/domain/use_case.dart';
-import 'package:pokedex_app/app/features/home/domain/entities/pokemon_entity.dart';
-import 'package:pokedex_app/app/features/home/domain/repositories/home_repository.dart';
+import 'package:weather_app/app/core/services/api/errors/failures.dart';
+import 'package:weather_app/app/core/shared/domain/use_case.dart';
+import 'package:weather_app/app/features/home/domain/entities/pokemon_entity.dart';
+import 'package:weather_app/app/features/home/domain/repositories/home_repository.dart';
 
 class GetListPokemonsUseCase
     implements UseCase<GetListPokemonsParams, List<PokemonEntity>> {

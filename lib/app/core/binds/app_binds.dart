@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:get/instance_manager.dart';
-import 'package:pokedex_app/app/core/binds/binds_helper.dart';
-import 'package:pokedex_app/app/core/services/api/api_config.dart';
-import 'package:pokedex_app/app/core/services/api/api_interceptor.dart';
-import 'package:pokedex_app/app/core/services/api/api_service_impl.dart';
+import 'package:weather_app/app/core/binds/binds_helper.dart';
+import 'package:weather_app/app/core/services/api/api_config.dart';
+import 'package:weather_app/app/core/services/api/api_interceptor.dart';
+import 'package:weather_app/app/core/services/api/api_service_impl.dart';
 
 class AppBinds implements Bindings {
   @override

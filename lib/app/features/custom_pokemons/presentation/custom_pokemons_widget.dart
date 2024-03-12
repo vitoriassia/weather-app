@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:pokedex_app/app/core/binds/binds_helper.dart';
-import 'package:pokedex_app/app/core/design/res/app_colors.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/controllers/custom_pokemons_controller.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/add_custom_pokemon_widget.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/widgets/list_custom_pokemon/list_custom_pokemons.dart';
+import 'package:weather_app/app/core/binds/binds_helper.dart';
+import 'package:weather_app/app/core/design/res/app_colors.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/controllers/custom_pokemons_controller.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/widgets/add_custom_pokemon/add_custom_pokemon_widget.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/widgets/list_custom_pokemon/list_custom_pokemons.dart';
 
 class CustomPokemonsWidget extends StatefulWidget {
   const CustomPokemonsWidget({Key? key}) : super(key: key);

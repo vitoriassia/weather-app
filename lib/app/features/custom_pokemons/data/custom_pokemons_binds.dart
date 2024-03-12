@@ -1,13 +1,13 @@
 import 'package:get/instance_manager.dart';
-import 'package:pokedex_app/app/core/binds/binds_helper.dart';
-import 'package:pokedex_app/app/core/storage/custom_pokemon/custom_pokemon_reader.dart';
-import 'package:pokedex_app/app/core/storage/custom_pokemon/custom_pokemon_writer.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/data/implementations/custom_pokemons_local_data_source_impl.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/data/implementations/custom_pokemons_repository_impl.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/useCases/delete_custom_pokemon_use_case.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/useCases/get_list_custom_pokemons_use_case.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/domain/useCases/register_custom_pokemon_use_case.dart';
-import 'package:pokedex_app/app/features/custom_pokemons/presentation/controllers/custom_pokemons_controller.dart';
+import 'package:weather_app/app/core/binds/binds_helper.dart';
+import 'package:weather_app/app/core/storage/custom_pokemon/custom_pokemon_reader.dart';
+import 'package:weather_app/app/core/storage/custom_pokemon/custom_pokemon_writer.dart';
+import 'package:weather_app/app/features/custom_pokemons/data/implementations/custom_pokemons_local_data_source_impl.dart';
+import 'package:weather_app/app/features/custom_pokemons/data/implementations/custom_pokemons_repository_impl.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/useCases/delete_custom_pokemon_use_case.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/useCases/get_list_custom_pokemons_use_case.dart';
+import 'package:weather_app/app/features/custom_pokemons/domain/useCases/register_custom_pokemon_use_case.dart';
+import 'package:weather_app/app/features/custom_pokemons/presentation/controllers/custom_pokemons_controller.dart';
 
 class CustomPokemonsBinds implements Bindings {
   @override

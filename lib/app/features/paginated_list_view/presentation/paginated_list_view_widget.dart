@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/app/core/design/decorations/input_decorations.dart';
-import 'package:pokedex_app/app/core/design/res/app_colors.dart';
-import 'package:pokedex_app/app/core/design/res/dimen.dart';
-import 'package:pokedex_app/app/core/shared/presentation/ui_state.dart';
-import 'package:pokedex_app/app/features/paginated_list_view/data/pagination.dart';
-import 'package:pokedex_app/app/features/paginated_list_view/presentation/widgets/centered_progress_indicator.dart';
+import 'package:weather_app/app/core/design/decorations/input_decorations.dart';
+import 'package:weather_app/app/core/design/res/app_colors.dart';
+import 'package:weather_app/app/core/design/res/dimen.dart';
+import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
+import 'package:weather_app/app/features/paginated_list_view/data/pagination.dart';
+import 'package:weather_app/app/features/paginated_list_view/presentation/widgets/centered_progress_indicator.dart';
 
 class PaginatedListViewWidget<T> extends StatefulWidget {
   final bool? shrinkWrap;
