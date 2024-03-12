@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather_app/app/core/binds/binds_helper.dart';
 import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
-import 'package:weather_app/app/features/custom_pokemons/presentation/custom_pokemons_widget.dart';
 import 'package:weather_app/app/features/home/presentation/controllers/home_controller.dart';
 import 'package:weather_app/app/features/home/presentation/widgets/home_scaffold.dart';
-import 'package:weather_app/app/features/home/presentation/widgets/list_pokemons.dart';
 import 'package:weather_app/app/features/home/presentation/widgets/progress_indicator_pokedex.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,7 +17,6 @@ class _HomePageState extends State<HomePage> {
   final HomeController _controller = BindsHelper.get<HomeController>();
   @override
   void initState() {
-    _controller.loadingListPokemons(page: 1);
     super.initState();
   }
 
@@ -47,12 +44,10 @@ class _HomePageState extends State<HomePage> {
             );
           }
 
-          return TabBarView(
+          return const TabBarView(
             children: [
-              ListPokemons(
-                homeController: _controller,
-              ),
-              const CustomPokemonsWidget()
+              Placeholder(),
+              Placeholder(),
             ],
           );
         },
