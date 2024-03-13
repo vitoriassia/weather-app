@@ -3,6 +3,8 @@ import 'package:weather_app/app/core/binds/binds_helper.dart';
 import 'package:weather_app/app/core/services/api/api_service_impl.dart';
 import 'package:weather_app/app/features/home/data/home_remote_data_source_impl.dart';
 import 'package:weather_app/app/features/home/data/home_repository_impl.dart';
+import 'package:weather_app/app/features/home/domain/useCases/get_list_main_events_use_case.dart';
+import 'package:weather_app/app/features/home/presentation/controllers/home_controller.dart';
 
 class HomeBinds implements Bindings {
   @override
@@ -18,8 +20,18 @@ class HomeBinds implements Bindings {
         BindsHelper.get<HomeRemoteDataSourceImpl>(),
       ),
     );
-    // ================== USE CASES ============== //
 
+    // ================== USE CASES ============== //
+    Get.put<GetListMainCitiesWithWeatherUseCase>(
+      GetListMainCitiesWithWeatherUseCase(
+        BindsHelper.get<HomeRepositoryImpl>(),
+      ),
+    );
     // ================ CONTROLLER =============== //
+    Get.put<HomeController>(
+      HomeController(
+        BindsHelper.get<GetListMainCitiesWithWeatherUseCase>(),
+      ),
+    );
   }
 }

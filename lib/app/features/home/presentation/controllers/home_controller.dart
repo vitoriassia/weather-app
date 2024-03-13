@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
 import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
+import 'package:weather_app/app/features/home/domain/useCases/get_list_main_events_use_case.dart';
 
 class HomeController extends GetxController {
   // --- USECASES --- //
-
-  HomeController();
+  final GetListMainCitiesWithWeatherUseCase getListMainCitiesWithWeatherUseCase;
+  HomeController(this.getListMainCitiesWithWeatherUseCase);
 
   // -- ATRIBUTES --- //
 
