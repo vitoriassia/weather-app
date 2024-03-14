@@ -17,7 +17,7 @@ class PaginatedListViewWidget<T> extends StatefulWidget {
   final Function(T item) builder;
 
   const PaginatedListViewWidget({
-    Key? key,
+    super.key,
     this.shrinkWrap,
     this.physics,
     this.padding,
@@ -26,7 +26,7 @@ class PaginatedListViewWidget<T> extends StatefulWidget {
     required this.paginationState,
     required this.builder,
     this.controller,
-  }) : super(key: key);
+  });
 
   @override
   State<PaginatedListViewWidget<T>> createState() =>

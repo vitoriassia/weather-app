@@ -7,7 +7,7 @@ import 'package:weather_app/app/features/home/presentation/widgets/home_scaffold
 import 'package:weather_app/app/features/home/presentation/widgets/progress_indicator_pokedex.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();

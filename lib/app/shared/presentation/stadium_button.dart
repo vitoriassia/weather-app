@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:weather_app/app/core/design/res/app_colors.dart';
 
 class StadiumButton extends StatelessWidget {
@@ -12,7 +11,7 @@ class StadiumButton extends StatelessWidget {
   final bool leftIcon;
   final bool isLoading;
   const StadiumButton(
-      {Key? key,
+      {super.key,
       required this.onPressed,
       this.leftIcon = true,
       this.expandedButton = false,
@@ -20,8 +19,7 @@ class StadiumButton extends StatelessWidget {
       this.icon,
       this.fontSize,
       this.isLoading = false,
-      required this.label})
-      : super(key: key);
+      required this.label});
 
   @override
   Widget build(BuildContext context) {

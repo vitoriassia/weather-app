@@ -24,7 +24,7 @@ class ErrorResponse extends Equatable {
   // Fazendo esse tratamento pela inconcistencia das repostas da API
   static String _messageToJson(dynamic json) {
     switch (json.runtimeType) {
-      case String:
+      case const (String):
         return json;
       default:
         return json['error'];

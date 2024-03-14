@@ -7,11 +7,11 @@ class CenteredProgressIndicator extends StatelessWidget {
   final double strokeWidth;
 
   const CenteredProgressIndicator({
-    Key? key,
+    super.key,
     this.color,
     this.size = 38,
     this.strokeWidth = 4.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

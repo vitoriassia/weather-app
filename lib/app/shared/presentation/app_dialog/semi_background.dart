@@ -4,10 +4,10 @@ class SemiBackground extends StatelessWidget {
   final double height;
   final Color color;
   const SemiBackground({
-    Key? key,
+    super.key,
     required this.height,
     required this.color,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

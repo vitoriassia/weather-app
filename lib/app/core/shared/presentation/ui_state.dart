@@ -41,7 +41,7 @@ class Success<T> extends Equatable implements UiState {
 }
 
 class PaginationLoading<T> extends Success<T> {
-  const PaginationLoading(T value) : super(value);
+  const PaginationLoading(super.value);
 }
 
 class PaginationError<T> extends Success<T> {
@@ -50,8 +50,7 @@ class PaginationError<T> extends Success<T> {
   late final String message;
   late final String? description;
 
-  PaginationError(T value, {required this.converter, this.failure})
-      : super(value) {
+  PaginationError(super.value, {required this.converter, this.failure}) {
     message = converter.message;
     description = converter.description;
   }

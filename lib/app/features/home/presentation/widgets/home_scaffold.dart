@@ -9,10 +9,10 @@ class HomeScaffold extends StatelessWidget {
   final Widget body;
   final TabBar tabBar;
   const HomeScaffold({
-    Key? key,
+    super.key,
     required this.body,
     required this.tabBar,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

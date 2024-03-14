@@ -9,5 +9,5 @@ class ApiConfig extends ApiConfigBase {
         connectTimeout: 30000,
         receiveTimeout: 30000,
       );
-  ApiConfig(Dio dio, Interceptor interceptor) : super(dio, interceptor);
+  ApiConfig(super.dio, Interceptor super.interceptor);
 }

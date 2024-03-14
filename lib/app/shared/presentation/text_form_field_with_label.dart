@@ -23,7 +23,7 @@ class TextFormFieldWithLabel extends StatelessWidget {
   final void Function()? onEditingComplete;
   final bool withoutValidator;
   const TextFormFieldWithLabel(
-      {Key? key,
+      {super.key,
       required this.label,
       this.controller,
       this.textFormField,
@@ -40,8 +40,7 @@ class TextFormFieldWithLabel extends StatelessWidget {
       this.hintText,
       this.onFieldSubmitted,
       this.autovalidateMode,
-      this.onEditingComplete})
-      : super(key: key);
+      this.onEditingComplete});
 
   @override
   Widget build(BuildContext context) {
