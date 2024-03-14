@@ -4,7 +4,8 @@ import 'package:weather_app/app/core/binds/binds_helper.dart';
 import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
 import 'package:weather_app/app/features/home/presentation/controllers/home_controller.dart';
 import 'package:weather_app/app/features/home/presentation/widgets/home_scaffold.dart';
-import 'package:weather_app/app/features/home/presentation/widgets/progress_indicator_pokedex.dart';
+import 'package:weather_app/app/features/home/presentation/widgets/app_progress_indicator.dart';
+import 'widgets/list_weathers_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,6 +18,7 @@ class _HomePageState extends State<HomePage> {
   final HomeController _controller = BindsHelper.get<HomeController>();
   @override
   void initState() {
+    _controller.getListCitiesWithWeather();
     super.initState();
   }
 
@@ -34,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         init: _controller,
         builder: (controller) {
           if (controller.uiState is Loading) {
-            return const ProgressIndicatorPokedex();
+            return const AppProgressIndicator();
           }
 
           if (controller.uiState is ErrorState) {
@@ -46,7 +48,9 @@ class _HomePageState extends State<HomePage> {
 
           return const TabBarView(
             children: [
-              Placeholder(),
+              ListMainCitiesWidget(
+                mainCities: [],
+              ),
               Placeholder(),
             ],
           );

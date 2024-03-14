@@ -7,6 +7,8 @@ class _Image extends AssetImage {
 }
 
 class AppImages {
-  static const pokeball = _Image('pokeball.png');
-  static const bulbasaur = _Image('bulbasaur.png');
+  static const appLogo = _Image('app_logo.png');
+  static const midRain = _Image(
+    'weather_icons/default.png',
+  );
 }

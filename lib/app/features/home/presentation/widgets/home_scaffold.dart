@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:weather_app/app/core/design/images/app_images.dart';
 import 'package:weather_app/app/core/design/res/app_colors.dart';
-import 'package:weather_app/app/core/design/res/dimen.dart';
 import 'package:weather_app/app/core/design/styles/text_style.dart';
 
 class HomeScaffold extends StatelessWidget {
@@ -23,41 +20,42 @@ class HomeScaffold extends StatelessWidget {
         appBar: AppBar(
           title: Column(
             children: [
-              Text('Pokedex', style: PokedexTextStyle.headlineWhite),
+              Text(
+                'Weather App',
+                style: AppTextStyle.headline,
+              ),
             ],
           ),
           centerTitle: true,
-          backgroundColor: AppColors.redPokedexColor,
+          backgroundColor: AppColors.primaryColor,
           bottom: TabBar(
+            padding: const EdgeInsets.all(10),
+            dividerHeight: 0,
             splashBorderRadius: BorderRadius.circular(10),
             indicatorColor: Colors.white,
-            indicatorPadding: const EdgeInsets.all(PokedexDimen.xxSmall),
             indicator: BoxDecoration(
-                color: const Color.fromARGB(255, 162, 6, 47),
-                borderRadius: BorderRadius.circular(10)),
+              color: AppColors.primaryColorDark,
+              borderRadius: BorderRadius.circular(10),
+            ),
             tabs: [
               Tab(
-                child: Text('POKÉMONS', style: PokedexTextStyle.headlineWhite3),
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text('Weather', style: AppTextStyle.headlineWhite3),
+                ),
               ),
               Tab(
-                child: Text('CUSTOM POKÉMONS',
-                    style: PokedexTextStyle.headlineWhite3),
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text('Forecast', style: AppTextStyle.headlineWhite3),
+                ),
               ),
             ],
           ),
           elevation: 0,
         ),
-        body: Stack(
-          fit: StackFit.expand,
-          children: [
-            Image(
-              image: AppImages.pokeball,
-              color: Colors.grey.withOpacity(0.2),
-            ),
-            SafeArea(
-              child: body,
-            )
-          ],
+        body: SafeArea(
+          child: body,
         ),
       ),
     );

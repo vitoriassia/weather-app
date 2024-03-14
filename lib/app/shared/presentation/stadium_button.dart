@@ -28,7 +28,7 @@ class StadiumButton extends StatelessWidget {
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),
-            backgroundColor: buttonColor ?? AppColors.redPokedexColor),
+            backgroundColor: buttonColor ?? AppColors.primaryColor),
         onPressed: isLoading ? () {} : onPressed,
         icon: Visibility(
           visible: icon != null,

@@ -12,7 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Pokedex APP',
+      title: 'Weather APP',
       initialBinding: AppBinds(),
       initialRoute: RoutesPath.home,
       getPages: Routes.getPages,

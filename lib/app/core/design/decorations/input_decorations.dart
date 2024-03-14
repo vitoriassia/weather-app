@@ -6,14 +6,14 @@ abstract class PokedexDecorations {
   static const borderInputDecoration = InputDecoration(
     contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 22),
     border: OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(PokedexDimen.normal))),
+        borderRadius: BorderRadius.all(Radius.circular(AppDimen.normal))),
     focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: AppColors.redPokedexColor, width: 2),
-      borderRadius: BorderRadius.all(Radius.circular(PokedexDimen.normal)),
+      borderSide: BorderSide(color: AppColors.primaryColor, width: 2),
+      borderRadius: BorderRadius.all(Radius.circular(AppDimen.normal)),
     ),
     enabledBorder: OutlineInputBorder(
       borderSide: BorderSide(color: Colors.black12, width: 1),
-      borderRadius: BorderRadius.all(Radius.circular(PokedexDimen.normal)),
+      borderRadius: BorderRadius.all(Radius.circular(AppDimen.normal)),
     ),
     hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
   );

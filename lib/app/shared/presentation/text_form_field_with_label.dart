@@ -59,13 +59,13 @@ class TextFormFieldWithLabel extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: PokedexDimen.small),
+          padding: const EdgeInsets.symmetric(vertical: AppDimen.small),
           child: textFormField ??
               TextFormField(
                 readOnly: readOnly!,
                 onEditingComplete: onEditingComplete,
                 controller: controller,
-                cursorColor: AppColors.redPokedexColor,
+                cursorColor: AppColors.primaryColor,
                 autofocus: false,
                 textInputAction: textInputAction,
                 maxLength: maxLenght,
