@@ -7,32 +7,32 @@ import 'package:weather_app/app/features/home/domain/entities/request/get_weathe
 import 'package:weather_app/app/features/home/domain/enums/units_temp_measurement.dart';
 import 'package:weather_app/app/features/home/domain/repositories/home_repository.dart';
 
-class GetListMainCitiesWithWeatherUseCase
+class GetWeatherForecastMainCitiesUseCaseUseCase
     implements
-        UseCase<GetListMainCitiesWithWeatherParams, List<MainCityEntity>> {
+        UseCase<GetWeatherForecastMainCitiesParams, List<MainCityEntity>> {
   final HomeRepository _repository;
 
-  GetListMainCitiesWithWeatherUseCase(this._repository);
+  GetWeatherForecastMainCitiesUseCaseUseCase(this._repository);
 
   @override
   Future<Either<Failure, List<MainCityEntity>>> call(
-      GetListMainCitiesWithWeatherParams params) async {
+      GetWeatherForecastMainCitiesParams params) async {
     // TODO adicionar modo offline
-    return Right(await getRemoteMainCitiesWithWeather(params.mainCities));
+    return Right(
+        await getRemoteMainCitiesWithWeatherForecast(params.mainCities));
   }
 
-  Future<List<MainCityEntity>> getRemoteMainCitiesWithWeather(
+  Future<List<MainCityEntity>> getRemoteMainCitiesWithWeatherForecast(
       List<MainCityEntity> mainCities) async {
     List<MainCityEntity> listWeather = [];
 
     for (var city in mainCities) {
-      final result =
-          await _repository.getWeatherFromLatLong(toPayloadWeather(city));
+      final result = await _repository.getForecast(toPayloadWeather(city));
 
       result.fold(
         (l) => null,
         (success) => listWeather.add(
-          city.copyWith(currentWeather: success),
+          city.copyWith(forecast: success),
         ),
       );
     }
@@ -46,9 +46,9 @@ class GetListMainCitiesWithWeatherUseCase
       );
 }
 
-class GetListMainCitiesWithWeatherParams extends Equatable {
+class GetWeatherForecastMainCitiesParams extends Equatable {
   final List<MainCityEntity> mainCities;
-  const GetListMainCitiesWithWeatherParams({
+  const GetWeatherForecastMainCitiesParams({
     required this.mainCities,
   });
 

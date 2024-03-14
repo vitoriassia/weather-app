@@ -10,11 +10,28 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   HomeRemoteDataSourceImpl(this._apiService);
 
   @override
-  Future<WeatherEntity> getWeatherFromLatLong(Map<String, dynamic> payload) {
+  Future<WeatherEntity> getWeather(Map<String, dynamic> payload) {
     return remoteDataSourceExceptionHandlerScope(
       () async {
         final response = await _apiService.getDataFrom(
           '/weather',
+          queryParams: payload,
+        );
+
+        final data = DataWrapperResponse.fromJson(
+            response.data['results'], response.statusCode);
+
+        return WeatherEntity.fromMap(data.result);
+      },
+    );
+  }
+
+  @override
+  Future<List<WeatherEntity>> getForecast(Map<String, dynamic> payload) {
+    return remoteDataSourceExceptionHandlerScope(
+      () async {
+        final response = await _apiService.getDataFrom(
+          '/forecast',
           queryParams: payload,
         );
 

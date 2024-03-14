@@ -21,11 +21,11 @@ class WeatherEntity extends Equatable {
 
   factory WeatherEntity.fromMap(Map<String, dynamic> map) {
     return WeatherEntity(
-      icon: map['icon'] as String,
-      weather: map['weather'] as String,
-      temp: map['temp'] as double,
-      maxTemp: map['maxTemp'] as double,
-      minTemp: map['minTemp'] as double,
+      icon: map['weather']['icon'] as String,
+      weather: map['weather']['main'] as String,
+      temp: map['main']['temp'] as double,
+      maxTemp: map['main']['temp_max'] as double,
+      minTemp: map['main']['temp_min'] as double,
     );
   }
 

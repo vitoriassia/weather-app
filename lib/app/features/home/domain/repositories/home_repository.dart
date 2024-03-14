@@ -6,4 +6,7 @@ import 'package:weather_app/app/features/home/domain/entities/weather_entity.dar
 abstract class HomeRepository {
   Future<Either<Failure, WeatherEntity>> getWeatherFromLatLong(
       GetWeatherFromLatLongPayload payload);
+
+  Future<Either<Failure, List<WeatherEntity>>> getForecast(
+      GetWeatherFromLatLongPayload payload);
 }

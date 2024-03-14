@@ -15,8 +15,15 @@ class HomeRepositoryImpl extends HomeRepository {
   Future<Either<Failure, WeatherEntity>> getWeatherFromLatLong(
       GetWeatherFromLatLongPayload payload) {
     return repositoryExceptionHandlerScope<WeatherEntity>(
-      () async =>
-          await _remoteDataSource.getWeatherFromLatLong(payload.toMap()),
+      () async => await _remoteDataSource.getWeather(payload.toMap()),
+    );
+  }
+
+  @override
+  Future<Either<Failure, List<WeatherEntity>>> getForecast(
+      GetWeatherFromLatLongPayload payload) {
+    return repositoryExceptionHandlerScope<List<WeatherEntity>>(
+      () async => await _remoteDataSource.getForecast(payload.toMap()),
     );
   }
 }

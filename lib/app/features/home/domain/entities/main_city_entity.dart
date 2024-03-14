@@ -5,23 +5,27 @@ import 'package:weather_app/app/features/home/domain/entities/weather_entity.dar
 class MainCityEntity extends Equatable {
   final String name;
   final LatLngEntity latLngEntity;
-  final WeatherEntity? weatherEntity;
+  final WeatherEntity? currentWeather;
+  final List<WeatherEntity>? forecast;
 
   const MainCityEntity({
     required this.name,
     required this.latLngEntity,
-    this.weatherEntity,
+    this.currentWeather,
+    this.forecast,
   });
 
   MainCityEntity copyWith({
     String? name,
     LatLngEntity? latLngEntity,
-    WeatherEntity? weatherEntity,
+    WeatherEntity? currentWeather,
+    List<WeatherEntity>? forecast,
   }) {
     return MainCityEntity(
       name: name ?? this.name,
       latLngEntity: latLngEntity ?? this.latLngEntity,
-      weatherEntity: weatherEntity ?? this.weatherEntity,
+      currentWeather: currentWeather ?? this.currentWeather,
+      forecast: forecast ?? this.forecast,
     );
   }
 
@@ -29,6 +33,7 @@ class MainCityEntity extends Equatable {
   List<Object?> get props => [
         name,
         latLngEntity,
-        weatherEntity,
+        currentWeather,
+        forecast,
       ];
 }
