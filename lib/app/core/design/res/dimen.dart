@@ -20,5 +20,6 @@ abstract class AppFontSize {
   static const xLarge = 20.0;
   static const xxLarge = 24.0;
   static const xxxLarge = 28.0;
-  static const headline = 50.0;
+  static const headline = 32.0;
+  static const headline2 = 40.0;
 }

@@ -10,7 +10,12 @@ abstract class AppTextStyle {
 
   static final body = _parent.copyWith(
     debugLabel: 'Body',
-    fontSize: AppFontSize.xxLarge,
+    fontSize: AppFontSize.xLarge,
+  );
+
+  static final body2 = _parent.copyWith(
+    debugLabel: 'Body2',
+    fontSize: AppFontSize.small,
   );
 
   static final subtitle1 = _parent.copyWith(
@@ -50,6 +55,15 @@ abstract class AppTextStyle {
     debugLabel: 'Headline White',
     fontFamily: 'Default-Pokedex-Font',
     fontSize: AppFontSize.headline,
+    fontWeight: FontWeight.w700,
+    color: Colors.white,
+    height: 1.4,
+  );
+
+  static final headline2White = _parent.copyWith(
+    debugLabel: 'Headline White',
+    fontFamily: 'Default-Pokedex-Font',
+    fontSize: AppFontSize.headline2,
     fontWeight: FontWeight.w700,
     color: Colors.white,
     height: 1.4,

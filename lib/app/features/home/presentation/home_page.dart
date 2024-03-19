@@ -5,6 +5,7 @@ import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
 import 'package:weather_app/app/features/home/presentation/controllers/home_controller.dart';
 import 'package:weather_app/app/features/home/presentation/widgets/home_scaffold.dart';
 import 'package:weather_app/app/features/home/presentation/widgets/app_progress_indicator.dart';
+import 'package:weather_app/app/features/home/presentation/widgets/list_forecast_widget.dart';
 import 'widgets/list_weathers_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -46,12 +47,14 @@ class _HomePageState extends State<HomePage> {
             );
           }
 
-          return const TabBarView(
+          return TabBarView(
             children: [
               ListMainCitiesWidget(
-                mainCities: [],
+                mainCities: controller.listCitiesWithWeather,
               ),
-              Placeholder(),
+              ListForecastWidget(
+                mainCities: controller.listCitiesWithWeather,
+              ),
             ],
           );
         },

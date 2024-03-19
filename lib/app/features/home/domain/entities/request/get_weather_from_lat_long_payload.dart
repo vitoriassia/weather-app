@@ -18,8 +18,8 @@ class GetWeatherFromLatLongPayload extends Equatable {
 
   Map<String, dynamic> toMap() => {
         'lat': latLngEntity.latitude,
-        'long': latLngEntity.longitude,
-        'unit': unitsTempMeasurement.toAPIKey,
+        'lon': latLngEntity.longitude,
+        'units': unitsTempMeasurement.toAPIKey,
       };
 
   @override

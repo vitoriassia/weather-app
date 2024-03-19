@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:weather_app/app/core/services/api/response/http_response.dart';
 
 class DataWrapperResponse<T> extends Equatable {
   final bool? success;
@@ -11,10 +12,10 @@ class DataWrapperResponse<T> extends Equatable {
         result,
       ];
 
-  factory DataWrapperResponse.fromJson(dynamic json, int? statusCode) {
+  factory DataWrapperResponse.fromJson(HttpResponse response) {
     return DataWrapperResponse<T>(
-      success: statusCode == 200 || statusCode == 201,
-      result: json,
+      success: response.statusCode == 200 || response.statusCode == 201,
+      result: response.data,
     );
   }
 }

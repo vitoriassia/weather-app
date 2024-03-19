@@ -51,6 +51,7 @@ class HomeController extends GetxController {
   List<MainCityEntity> get listCitiesWithWeather => _listCitiesWithWeather;
 
   Future<void> getListCitiesWithWeather() async {
+    _uiState.value = Loading();
     final result = await _getListMainCitiesWithWeatherUseCase(
       GetListMainCitiesWithWeatherParams(mainCities: _defaultMainCities),
     );

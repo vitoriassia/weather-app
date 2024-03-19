@@ -2,17 +2,13 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:developer' as developer;
 
+import 'package:weather_app/app/core/logs/app_logs.dart';
+
 class ApiInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     if (kDebugMode) {
-      developer.log(
-        "URL:"
-        '${options.baseUrl}${options.path}'
-        ' QUERY:${options.queryParameters}'
-        '\nDATA:${options.data?.toString()}',
-        name: 'REQUEST (${options.method}) ',
-      );
+      AppLogs.makeRequestLog(options: options);
     }
 
     // access token is not necessary or allowed for public resources
@@ -26,12 +22,7 @@ class ApiInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     if (kDebugMode) {
-      developer.log(
-        "URL:"
-        '${response.requestOptions.baseUrl}${response.requestOptions.path}'
-        '\n DATA:${response.data?.toString()}',
-        name: 'RESPONSE (${response.statusCode}) ',
-      );
+      AppLogs.successRequestLog(response);
     }
     return super.onResponse(response, handler);
   }

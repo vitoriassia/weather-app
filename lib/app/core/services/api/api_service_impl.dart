@@ -38,8 +38,11 @@ class ApiServiceImpl extends ApiService {
     return apiServiceExceptionHandlerScope(
       () async {
         final response = await apiConfig.dio.get(
-          '$endPoint&appid=${BuildConfig.apiKey}',
-          queryParameters: queryParams,
+          endPoint,
+          queryParameters: {
+            if (queryParams != null) ...queryParams,
+            'appid': BuildConfig.apiKey
+          },
         );
         return HttpResponse(
             statusCode: response.statusCode, data: response.data);

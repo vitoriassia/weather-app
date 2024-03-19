@@ -27,7 +27,7 @@ class ErrorResponse extends Equatable {
       case const (String):
         return json;
       default:
-        return json['error'];
+        return json['message'];
     }
   }
 }

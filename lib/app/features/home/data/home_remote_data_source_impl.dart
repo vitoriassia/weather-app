@@ -18,8 +18,7 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
           queryParams: payload,
         );
 
-        final data = DataWrapperResponse.fromJson(
-            response.data['results'], response.statusCode);
+        final data = DataWrapperResponse.fromJson(response);
 
         return WeatherEntity.fromMap(data.result);
       },
@@ -35,8 +34,7 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
           queryParams: payload,
         );
 
-        final data = DataWrapperResponse.fromJson(
-            response.data['results'], response.statusCode);
+        final data = DataWrapperResponse.fromJson(response.data);
 
         return WeatherEntity.fromMap(data.result);
       },
