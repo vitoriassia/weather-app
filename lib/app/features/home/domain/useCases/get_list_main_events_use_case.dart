@@ -1,3 +1,4 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:weather_app/app/core/services/api/errors/failures.dart';
@@ -17,8 +18,19 @@ class GetListMainCitiesWithWeatherUseCase
   @override
   Future<Either<Failure, List<MainCityEntity>>> call(
       GetListMainCitiesWithWeatherParams params) async {
-    // TODO adicionar modo offline
-    return Right(await getRemoteMainCitiesWithWeather(params.mainCities));
+    if (await hasConnection()) {
+      return Right(await getRemoteMainCitiesWithWeather(params.mainCities));
+    } else {
+      return Right(await _repository.getCurrentWeatherLocal());
+    }
+  }
+
+  Future<bool> hasConnection() async {
+    final List<ConnectivityResult> connectivityResult =
+        await (Connectivity().checkConnectivity());
+
+    return connectivityResult.contains(ConnectivityResult.mobile) ||
+        connectivityResult.contains(ConnectivityResult.wifi);
   }
 
   Future<List<MainCityEntity>> getRemoteMainCitiesWithWeather(
@@ -36,6 +48,9 @@ class GetListMainCitiesWithWeatherUseCase
         ),
       );
     }
+
+    _repository.persistListCurrentWeather(listWeather);
+
     return listWeather;
   }
 

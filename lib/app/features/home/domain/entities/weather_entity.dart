@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:weather_app/app/core/extension/date_time_ext.dart';
+import 'package:weather_app/app/core/storage/main_cities/adapters/weather_box/weather_box.dart';
 
 class WeatherEntity extends Equatable {
   final String icon;
@@ -16,6 +17,14 @@ class WeatherEntity extends Equatable {
     required this.minTemp,
     required this.abrWeekDay,
   });
+
+  WeatherBox toBox() => WeatherBox(
+      icon: icon,
+      weather: weather,
+      temp: temp,
+      maxTemp: maxTemp,
+      minTemp: minTemp,
+      abrWeekDay: abrWeekDay);
 
   @override
   String toString() {

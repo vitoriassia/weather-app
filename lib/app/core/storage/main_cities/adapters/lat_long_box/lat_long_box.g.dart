@@ -1,35 +1,35 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pokemon_type_box.dart';
+part of 'lat_long_box.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class PokemonTypeBoxAdapter extends TypeAdapter<PokemonTypeBox> {
+class LatLongBoxAdapter extends TypeAdapter<LatLongBox> {
   @override
   final int typeId = 1;
 
   @override
-  PokemonTypeBox read(BinaryReader reader) {
+  LatLongBox read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return PokemonTypeBox(
-      id: fields[0] as int,
-      name: fields[1] as String,
+    return LatLongBox(
+      latitude: fields[0] as double,
+      longitude: fields[1] as double,
     );
   }
 
   @override
-  void write(BinaryWriter writer, PokemonTypeBox obj) {
+  void write(BinaryWriter writer, LatLongBox obj) {
     writer
       ..writeByte(2)
       ..writeByte(0)
-      ..write(obj.id)
+      ..write(obj.latitude)
       ..writeByte(1)
-      ..write(obj.name);
+      ..write(obj.longitude);
   }
 
   @override
@@ -38,7 +38,7 @@ class PokemonTypeBoxAdapter extends TypeAdapter<PokemonTypeBox> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is PokemonTypeBoxAdapter &&
+      other is LatLongBoxAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

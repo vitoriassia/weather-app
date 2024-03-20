@@ -1,41 +1,44 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'custom_pokemon_box.dart';
+part of 'main_city_box.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class CustomPokemonBoxAdapter extends TypeAdapter<CustomPokemonBox> {
+class MainCityBoxAdapter extends TypeAdapter<MainCityBox> {
   @override
   final int typeId = 0;
 
   @override
-  CustomPokemonBox read(BinaryReader reader) {
+  MainCityBox read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return CustomPokemonBox(
-      id: fields[0] as int,
-      name: fields[1] as String,
-      imagePath: fields[2] as String?,
-      types: (fields[3] as List).cast<PokemonTypeBox>(),
+    return MainCityBox(
+      name: fields[0] as String,
+      latLngEntity: fields[1] as LatLongBox,
+      currentWeather: fields[2] as WeatherBox?,
+      forecast: (fields[3] as List?)?.cast<WeatherBox>(),
+      identifier: fields[4] as String,
     );
   }
 
   @override
-  void write(BinaryWriter writer, CustomPokemonBox obj) {
+  void write(BinaryWriter writer, MainCityBox obj) {
     writer
-      ..writeByte(4)
+      ..writeByte(5)
       ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(1)
       ..write(obj.name)
+      ..writeByte(1)
+      ..write(obj.latLngEntity)
       ..writeByte(2)
-      ..write(obj.imagePath)
+      ..write(obj.currentWeather)
       ..writeByte(3)
-      ..write(obj.types);
+      ..write(obj.forecast)
+      ..writeByte(4)
+      ..write(obj.identifier);
   }
 
   @override
@@ -44,7 +47,7 @@ class CustomPokemonBoxAdapter extends TypeAdapter<CustomPokemonBox> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is CustomPokemonBoxAdapter &&
+      other is MainCityBoxAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

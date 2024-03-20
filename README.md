@@ -1,4 +1,4 @@
-# W APP
+# WEATHER APP
 
 # Features
 
