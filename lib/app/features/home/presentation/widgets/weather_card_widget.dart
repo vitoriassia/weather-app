@@ -51,8 +51,8 @@ class WeatherCardWidget extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Image(
-                    image: AppImages.midRain,
+                  Image(
+                    image: AppImages.weatherIcon(entity.currentWeather!.icon),
                     height: 100,
                     width: 110,
                   ),
