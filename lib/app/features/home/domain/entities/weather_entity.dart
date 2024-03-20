@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:weather_app/app/core/extension/date_time_ext.dart';
 
 class WeatherEntity extends Equatable {
   final String icon;
@@ -6,12 +7,14 @@ class WeatherEntity extends Equatable {
   final double temp;
   final double maxTemp;
   final double minTemp;
+  final String? abrWeekDay;
   const WeatherEntity({
     required this.icon,
     required this.weather,
     required this.temp,
     required this.maxTemp,
     required this.minTemp,
+    required this.abrWeekDay,
   });
 
   @override
@@ -23,9 +26,10 @@ class WeatherEntity extends Equatable {
     return WeatherEntity(
       icon: map['weather'][0]['icon'] as String,
       weather: map['weather'][0]['main'] as String,
-      temp: map['main']['temp'] as double,
-      maxTemp: map['main']['temp_max'] as double,
-      minTemp: map['main']['temp_min'] as double,
+      temp: double.parse(map['main']['temp'].toString()),
+      maxTemp: double.parse(map['main']['temp_max'].toString()),
+      minTemp: double.parse(map['main']['temp_min'].toString()),
+      abrWeekDay: DateTime.tryParse(map['dt_txt'] ?? '').getAbrMonth(),
     );
   }
 

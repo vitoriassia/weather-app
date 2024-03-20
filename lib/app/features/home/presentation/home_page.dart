@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     _controller.getListCitiesWithWeather();
+    _controller.getListCitiesWithForecast();
     super.initState();
   }
 
@@ -36,7 +37,8 @@ class _HomePageState extends State<HomePage> {
       body: GetX<HomeController>(
         init: _controller,
         builder: (controller) {
-          if (controller.uiState is Loading) {
+          if (controller.uiState is Loading ||
+              controller.uiStateForecast is Loading) {
             return const AppProgressIndicator();
           }
 
@@ -53,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                 mainCities: controller.listCitiesWithWeather,
               ),
               ListForecastWidget(
-                mainCities: controller.listCitiesWithWeather,
+                mainCities: controller.listCitiesWithForecast,
               ),
             ],
           );

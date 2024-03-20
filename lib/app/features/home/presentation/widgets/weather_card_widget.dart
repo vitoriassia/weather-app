@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_app/app/core/design/images/app_images.dart';
 import 'package:weather_app/app/core/design/res/app_colors.dart';

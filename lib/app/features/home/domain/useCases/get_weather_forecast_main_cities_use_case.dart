@@ -7,12 +7,12 @@ import 'package:weather_app/app/features/home/domain/entities/request/get_weathe
 import 'package:weather_app/app/features/home/domain/enums/units_temp_measurement.dart';
 import 'package:weather_app/app/features/home/domain/repositories/home_repository.dart';
 
-class GetWeatherForecastMainCitiesUseCaseUseCase
+class GetWeatherForecastMainCitiesUseCase
     implements
         UseCase<GetWeatherForecastMainCitiesParams, List<MainCityEntity>> {
   final HomeRepository _repository;
 
-  GetWeatherForecastMainCitiesUseCaseUseCase(this._repository);
+  GetWeatherForecastMainCitiesUseCase(this._repository);
 
   @override
   Future<Either<Failure, List<MainCityEntity>>> call(

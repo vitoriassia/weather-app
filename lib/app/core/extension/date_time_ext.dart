@@ -8,4 +8,7 @@ extension DateTimeExtension on DateTime? {
     }
     return '';
   }
+
+  String? getAbrMonth() =>
+      (this != null) ? DateFormat.E('en_US').format(this!) : null;
 }

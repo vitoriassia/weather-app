@@ -37,10 +37,17 @@ class ForecastCardWidget extends StatelessWidget {
                     height: AppDimen.medium,
                   ),
                   if (entity.forecast != null)
-                    Row(
-                      children: entity.forecast!
-                          .map((e) => const ForeCastItemCard())
-                          .toList(),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      child: Wrap(
+                        children: entity.forecast!
+                            .map(
+                              (e) => ForeCastItemCard(
+                                entity: e,
+                              ),
+                            )
+                            .toList(),
+                      ),
                     ),
                   if (entity.forecast == null)
                     Row(

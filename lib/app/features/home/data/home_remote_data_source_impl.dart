@@ -34,10 +34,29 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
           queryParams: payload,
         );
 
-        final data = DataWrapperResponse.fromJson(response.data);
+        final data = DataWrapperResponse.fromJson(response);
 
-        return WeatherEntity.fromMap(data.result);
+        final listOnlyWeek = _getOneDayForWeek(data.result['list']);
+
+        return List<WeatherEntity>.from(
+          listOnlyWeek.map((e) => WeatherEntity.fromMap(e)),
+        );
       },
     );
+  }
+
+  List<dynamic> _getOneDayForWeek(list) {
+    Map<int, dynamic> daysData = {};
+
+    for (var item in list) {
+      DateTime date = DateTime.parse(item['dt_txt']);
+
+      int dayOfWeek = date.weekday;
+
+      if (!daysData.containsKey(dayOfWeek)) {
+        daysData[dayOfWeek] = item;
+      }
+    }
+    return daysData.values.toList();
   }
 }

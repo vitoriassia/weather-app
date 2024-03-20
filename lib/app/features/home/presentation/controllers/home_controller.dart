@@ -4,12 +4,18 @@ import 'package:weather_app/app/core/shared/presentation/message_to_failure_conv
 import 'package:weather_app/app/core/shared/presentation/ui_state.dart';
 import 'package:weather_app/app/features/home/domain/entities/main_city_entity.dart';
 import 'package:weather_app/app/features/home/domain/useCases/get_list_main_events_use_case.dart';
+import 'package:weather_app/app/features/home/domain/useCases/get_weather_forecast_main_cities_use_case.dart';
 
 class HomeController extends GetxController {
   // --- USECASES --- //
   final GetListMainCitiesWithWeatherUseCase
       _getListMainCitiesWithWeatherUseCase;
-  HomeController(this._getListMainCitiesWithWeatherUseCase);
+  final GetWeatherForecastMainCitiesUseCase
+      _getWeatherForecastMainCitiesUseCase;
+  HomeController(
+    this._getListMainCitiesWithWeatherUseCase,
+    this._getWeatherForecastMainCitiesUseCase,
+  );
 
   // -- ATRIBUTES --- //
   final Rx<UiState> _uiState = Rx<UiState>(Initial());
@@ -64,6 +70,33 @@ class HomeController extends GetxController {
       (success) {
         _listCitiesWithWeather.clear();
         _listCitiesWithWeather.addAll(success);
+        return Success(success);
+      },
+    );
+  }
+
+  // -- ATRIBUTES --- //
+  final Rx<UiState> _uiStateForecast = Rx<UiState>(Initial());
+  UiState get uiStateForecast => _uiStateForecast.value;
+
+  final RxList<MainCityEntity> _listCitiesWithForecast =
+      RxList<MainCityEntity>();
+  List<MainCityEntity> get listCitiesWithForecast => _listCitiesWithForecast;
+
+  Future<void> getListCitiesWithForecast() async {
+    _uiState.value = Loading();
+    final result = await _getWeatherForecastMainCitiesUseCase(
+      GetWeatherForecastMainCitiesParams(mainCities: _defaultMainCities),
+    );
+
+    _uiState.value = result.fold(
+      (failure) => ErrorState(
+        converter: FailureToMessageConverterFactory(failure)(),
+        failure: failure,
+      ),
+      (success) {
+        _listCitiesWithForecast.clear();
+        _listCitiesWithForecast.addAll(success);
         return Success(success);
       },
     );

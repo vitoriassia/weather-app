@@ -3,9 +3,11 @@ import 'package:weather_app/app/core/design/images/app_images.dart';
 import 'package:weather_app/app/core/design/res/app_colors.dart';
 import 'package:weather_app/app/core/design/res/dimen.dart';
 import 'package:weather_app/app/core/design/styles/text_style.dart';
+import 'package:weather_app/app/features/home/domain/entities/weather_entity.dart';
 
 class ForeCastItemCard extends StatelessWidget {
-  const ForeCastItemCard({super.key});
+  final WeatherEntity entity;
+  const ForeCastItemCard({super.key, required this.entity});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class ForeCastItemCard extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'MON',
+              entity.abrWeekDay ?? '',
               style: AppTextStyle.body2,
             ),
             const SizedBox(
@@ -32,7 +34,7 @@ class ForeCastItemCard extends StatelessWidget {
               height: AppDimen.xxSmall,
             ),
             Text(
-              '23º',
+              '${entity.temp}º',
               style: AppTextStyle.body2,
             ),
           ],
